@@ -1,0 +1,42 @@
+#!/bin/bash -l
+#**********************************************************************
+#
+#   File: runjob
+#
+#   A file to run a SLURM job to use the GPU devices
+#
+#   Submit this job on the QUB Kelvin system with the command
+#
+#     sbatch runjob
+#
+#**********************************************************************
+#
+#SBATCH --job-name=FDTD
+#SBATCH -p hipri
+#SBATCH --time=3:00:00
+#SBATCH --output=/users/40173800/sharedscratch/actualomp/opencl-fdtd-out-STD-%j.log
+
+module add nvidia-cuda
+
+module add compilers/gcc/7.2.0
+
+time /users/40173800/2DFDTD/bin/getdevinfo.x
+
+for DIM in 500 750 1000 1250 1500 1750 2000 2250 2500 2750 3000 3250 3500 3750 4000 4250 4500 4750 5000 5250 5500 5750 6000
+do
+        echo "  "
+        echo "----------------------------------------------------------"
+        echo "  "
+        echo "   Running case for DIM = ${DIM} "
+        echo "  "
+
+        time /users/40173800/2DFDTD/bin/yee2d.x x=${DIM} y=${DIM} STD 2>&1
+done
+
+#**********************************************************************
+#
+#   End of file
+#
+#**********************************************************************
+
+

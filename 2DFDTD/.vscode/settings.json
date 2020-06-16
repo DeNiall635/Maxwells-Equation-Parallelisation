@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "stat.h": "c",
+        "gifenc.h": "c",
+        "cl.h": "c",
+        "yee2d.h": "c",
+        "time.h": "c",
+        "stdio.h": "c"
+    },
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}

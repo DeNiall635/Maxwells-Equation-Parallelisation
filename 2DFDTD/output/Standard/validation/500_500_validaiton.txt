@@ -1,0 +1,6 @@
+Lowest correct significant figure for OpenMP ex: 18 
+Lowest correct significant figure for OpenMP ey: 18 
+Lowest correct significant figure for OpenMP hz: 18 
+Lowest correct significant figure for OpenCL ex: 18 
+Lowest correct significant figure for OpenCL ey: 18 
+Lowest correct significant figure for OpenCL hz: 18

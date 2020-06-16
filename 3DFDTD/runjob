@@ -1,0 +1,157 @@
+#!/bin/bash
+#---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+---8
+#
+#   Shell script for execution of the fdtd3d_float program using OpenMP
+#
+#   This can be submitted to the job queue system on KelvinV2.  
+#
+#---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+---8
+#
+#--- Following are control cards for the SLURM batch job system
+#
+
+#SBATCH --job-name=fdtd3d_float
+#SBATCH -p hipri 
+#SBATCH --output=/users/40173800/3DFDTD/output/compare/FDTD-1CPU250-%j.log
+#SBATCH --time=15:00
+#SBATCH --cpus-per-task=1
+
+#
+#--- Prepare the software environment 
+#
+#	May need this when running with large cell sizes
+
+
+module add compilers/gcc/5.1.0
+
+cd ${HOME}/3DFDTD
+
+make
+
+#
+#--- Establish a variable pointing at the root directory of 
+#    this project
+#
+
+export PROJ_DIR=/users/40173800/3DFDTD
+
+#
+#--- Define a temporary directory for Files used in the Run
+#
+
+export TMP_DIR=/tmp/$$
+
+echo "	TMP_DIR = ${TMP_DIR}	"
+echo "	"
+
+mkdir ${TMP_DIR}
+
+cd ${TMP_DIR}
+
+echo "	PWD = ${PWD} "
+echo "	"
+
+#
+#--- Create a here document
+#
+
+cat>input.dat<<EOF
+7
+1
+3 2.0 3.0
+EOF
+
+echo "	Following is the input.dat contains "
+echo "	"
+
+cat input.dat
+
+echo "	"
+echo "	**** End of input.dat "
+echo "	"
+
+#
+#--- Banner header
+#
+#    We know that each single node on Kelvin (Nov 2019) 
+#    is a HP Apollo computer with Intel Haswell processors.
+#
+#    Each node has 20 CPUS (cores). 
+#
+#    In a computer intensive application we set OMP_NUM_THREADS
+#    to be no larger than the number of cores.
+#
+
+
+timestamp=`date`
+
+osname=`uname -r`
+arch=`uname -ar`
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+echo "   "
+echo "    Bash script to run the FDTD3D_Float job using OpenMP  "
+echo "    --------------------------------------------------- "
+echo "   "
+echo "    Time now: ${timestamp} "
+echo "   "
+echo "    Details of the BASH shell environment "
+echo "   "
+echo "      HOSTNAME = ${HOSTNAME} "
+echo "      OMP_NUM_THREADS = ${OMP_NUM_THREADS}"
+echo "      PATH     = ${PATH}     "
+echo "      PWD      = ${PWD}      "
+echo "      HOME     = ${HOME}     "
+echo "      PID      = $$          "
+echo "      PPID     = ${PPID}     "
+echo "      UID      = ${UID}      "
+echo "      EUID     = ${EUID}     "
+echo "   "
+echo "      Op. sys  = ${osname}   "
+echo "      Arch.    = ${arch}     "
+echo "   "
+echo "      Num CPUs = ${numcpus} on this compute node "
+echo "   "
+echo "      PROJ_DIR = ${PROJ_DIR} "
+echo "   "
+
+#
+#---- Information from /proc/cpuinfo
+#
+
+echo "   "
+echo "    Information from /proc/cpuinfo "
+echo "   "
+
+cat /proc/cpuinfo 
+
+echo "   "
+echo "    **** End of information from /proc/cpuinfo "
+echo "   "
+
+#
+#---- Establish into the directory and run the program 
+#
+
+time ${PROJ_DIR}/bin/fdtd3d.x < ${TMP_DIR}/input.dat 
+
+#
+#---- Banner footer
+#
+
+timestamp=`date`
+
+echo "   "
+echo "    ***** Script completes at ${timestamp} "
+echo "   "
+
+
+exit
+
+#
+#---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+---8
+#
+#   End of file 
+#
+#---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+---8

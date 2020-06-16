@@ -1,0 +1,3738 @@
+Unable to load compilers/gcc/5.1.0 -- alternative module (compilers/gcc/7.2.0) already loaded.
+/bin/rm  -vf /users/40173800/3DFDTD/src/*.o /users/40173800/3DFDTD/bin/*.x 
+removed ‘/users/40173800/3DFDTD/bin/fdtd3d.x’
+gcc -fopenmp -Wall -o3 -g --std=c99 -o /users/40173800/3DFDTD/bin/fdtd3d.x /users/40173800/3DFDTD/src/fdtd3d_float.c  -lm 
+	TMP_DIR = /tmp/23283	
+	
+	PWD = /tmp/23283 
+	
+	Following is the input.dat contains 
+	
+7
+1
+3 2.0 3.0
+	
+	**** End of input.dat 
+	
+   
+    Bash script to run the FDTD3D_Float job using OpenMP  
+    --------------------------------------------------- 
+   
+    Time now: Tue Apr 21 15:05:53 BST 2020 
+   
+    Details of the BASH shell environment 
+   
+      HOSTNAME = node032 
+      OMP_NUM_THREADS = 1
+      PATH     = /opt/gridware/depots/54e7fb3c/el7/pkg/compilers/gcc/7.2.0/bin:/opt/flight-direct/embedded/bin/:/opt/apps/nvidia-cuda/10.1.168/bin/toolkit/bin:/opt/flight-direct/embedded/bin/:/usr/lib64/qt-3.3/bin:/opt/flight-direct/opt/s3cmd:/opt/flight-direct/embedded/bin/:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/users/40173800/.local/bin:/users/40173800/bin     
+      PWD      = /tmp/23283      
+      HOME     = /users/40173800     
+      PID      = 23283          
+      PPID     = 23278     
+      UID      = 406600106      
+      EUID     = 406600106     
+   
+      Op. sys  = 3.10.0-957.5.1.el7.x86_64   
+      Arch.    = Linux node032.pri.kelvin2.alces.network 3.10.0-957.5.1.el7.x86_64 #1 SMP Fri Feb 1 14:54:57 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux     
+   
+      Num CPUs =  on this compute node 
+   
+      PROJ_DIR = /users/40173800/3DFDTD 
+   
+   
+    Information from /proc/cpuinfo 
+   
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 2600.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 0
+cpu cores	: 10
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5187.87
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 1200.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 2
+cpu cores	: 10
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5187.87
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 2600.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 4
+cpu cores	: 10
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5187.87
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 2600.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 9
+cpu cores	: 10
+apicid		: 18
+initial apicid	: 18
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5187.87
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 1200.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 11
+cpu cores	: 10
+apicid		: 22
+initial apicid	: 22
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5187.87
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 1200.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 0
+cpu cores	: 10
+apicid		: 32
+initial apicid	: 32
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5199.93
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 1200.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 2
+cpu cores	: 10
+apicid		: 36
+initial apicid	: 36
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5199.93
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 2600.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 4
+cpu cores	: 10
+apicid		: 40
+initial apicid	: 40
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5199.93
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 8
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 1200.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 9
+cpu cores	: 10
+apicid		: 50
+initial apicid	: 50
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5199.93
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 9
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 1200.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 11
+cpu cores	: 10
+apicid		: 54
+initial apicid	: 54
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5199.93
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 10
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 1200.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 1
+cpu cores	: 10
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5187.87
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 11
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 2600.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 3
+cpu cores	: 10
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5187.87
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 12
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 2600.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 8
+cpu cores	: 10
+apicid		: 16
+initial apicid	: 16
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5187.87
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 13
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 2600.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 10
+cpu cores	: 10
+apicid		: 20
+initial apicid	: 20
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5187.87
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 14
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 1200.000
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 10
+core id		: 12
+cpu cores	: 10
+apicid		: 24
+initial apicid	: 24
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5187.87
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 15
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 2600.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 1
+cpu cores	: 10
+apicid		: 34
+initial apicid	: 34
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5199.93
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 16
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 2600.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 3
+cpu cores	: 10
+apicid		: 38
+initial apicid	: 38
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5199.93
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 17
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 2600.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 8
+cpu cores	: 10
+apicid		: 48
+initial apicid	: 48
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5199.93
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 18
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 1200.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 10
+cpu cores	: 10
+apicid		: 52
+initial apicid	: 52
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5199.93
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 19
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 1200.000
+cache size	: 25600 KB
+physical id	: 1
+siblings	: 10
+core id		: 12
+cpu cores	: 10
+apicid		: 56
+initial apicid	: 56
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm epb intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts spec_ctrl intel_stibp flush_l1d
+bogomips	: 5199.93
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+   
+    **** End of information from /proc/cpuinfo 
+   
+
+
+     FDTD simulation of plane wave scattering 
+     ========================================   
+
+     Number of grid points: 
+       x-dimension (IE) =   50 
+       y-dimension (JE) =   50 
+       z-dimension (KE) =   50 
+
+     Number of frequencies (NFREQS) =   3
+
+     Cell locations: 
+
+       (ic,jc,kc) = (25,25,25) 
+       (ia,ja,ka) = (20,20,20) 
+       (ib,jb,kb) = (29,29,29)   
+
+     Parameters for each frequency - Fourier transform
+
+
+
+Enter the value for number of points in PML (npml) --> Value read for npml = 7.000000 
+     Computed values for each PML 
+
+
+
+     Contents of the fi1/gi2/gi3 matrices  
+
+
+ 0 0.3300 0.7519 0.5038
+	0.2642 0.7910 0.5820
+ 1 0.2078 0.8279 0.6559
+	0.1601 0.8620 0.7240
+ 2 0.1203 0.8926 0.7853
+	0.0877 0.9194 0.8388
+ 3 0.0616 0.9420 0.8840
+	0.0413 0.9604 0.9208
+ 4 0.0260 0.9747 0.9494
+	0.0150 0.9852 0.9704
+ 5 0.0077 0.9924 0.9847
+	0.0032 0.9968 0.9935
+ 6 0.0010 0.9990 0.9981
+	0.0001 0.9999 0.9998
+ 7 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+ 8 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+ 9 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+10 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+11 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+12 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+13 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+14 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+15 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+16 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+17 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+18 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+19 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+20 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+21 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+22 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+23 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+24 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+25 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+26 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+27 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+28 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+29 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+30 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+31 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+32 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+33 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+34 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+35 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+36 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+37 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+38 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+39 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+40 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+41 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+42 0.0000 1.0000 1.0000
+	0.0001 0.9999 0.9998
+43 0.0010 0.9990 0.9981
+	0.0032 0.9968 0.9935
+44 0.0077 0.9924 0.9847
+	0.0150 0.9852 0.9704
+45 0.0260 0.9747 0.9494
+	0.0413 0.9604 0.9208
+46 0.0616 0.9420 0.8840
+	0.0877 0.9194 0.8388
+47 0.1203 0.8926 0.7853
+	0.1601 0.8620 0.7240
+48 0.2078 0.8279 0.6559
+	0.2642 0.7910 0.5820
+49 0.3300 0.7519 0.5038
+	0.0000 1.0000 1.0000
+     Contents of the fj & gj vectors
+
+ 0 0.3300 0.7519 0.5038
+	0.2642 0.7910 0.5820
+ 1 0.2078 0.8279 0.6559
+	0.1601 0.8620 0.7240
+ 2 0.1203 0.8926 0.7853
+	0.0877 0.9194 0.8388
+ 3 0.0616 0.9420 0.8840
+	0.0413 0.9604 0.9208
+ 4 0.0260 0.9747 0.9494
+	0.0150 0.9852 0.9704
+ 5 0.0077 0.9924 0.9847
+	0.0032 0.9968 0.9935
+ 6 0.0010 0.9990 0.9981
+	0.0001 0.9999 0.9998
+ 7 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+ 8 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+ 9 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+10 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+11 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+12 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+13 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+14 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+15 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+16 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+17 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+18 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+19 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+20 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+21 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+22 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+23 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+24 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+25 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+26 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+27 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+28 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+29 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+30 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+31 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+32 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+33 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+34 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+35 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+36 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+37 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+38 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+39 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+40 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+41 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+42 0.0000 1.0000 1.0000
+	0.0001 0.9999 0.9998
+43 0.0010 0.9990 0.9981
+	0.0032 0.9968 0.9935
+44 0.0077 0.9924 0.9847
+	0.0150 0.9852 0.9704
+45 0.0260 0.9747 0.9494
+	0.0413 0.9604 0.9208
+46 0.0616 0.9420 0.8840
+	0.0877 0.9194 0.8388
+47 0.1203 0.8926 0.7853
+	0.1601 0.8620 0.7240
+48 0.2078 0.8279 0.6559
+	0.2642 0.7910 0.5820
+49 0.3300 0.7519 0.5038
+	0.0000 1.0000 1.0000
+     Contents of the fk & gk vectors
+
+ 0 0.3300 0.7519 0.5038
+	0.2642 0.7910 0.5820
+ 1 0.2078 0.8279 0.6559
+	0.1601 0.8620 0.7240
+ 2 0.1203 0.8926 0.7853
+	0.0877 0.9194 0.8388
+ 3 0.0616 0.9420 0.8840
+	0.0413 0.9604 0.9208
+ 4 0.0260 0.9747 0.9494
+	0.0150 0.9852 0.9704
+ 5 0.0077 0.9924 0.9847
+	0.0032 0.9968 0.9935
+ 6 0.0010 0.9990 0.9981
+	0.0001 0.9999 0.9998
+ 7 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+ 8 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+ 9 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+10 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+11 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+12 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+13 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+14 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+15 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+16 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+17 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+18 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+19 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+20 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+21 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+22 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+23 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+24 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+25 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+26 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+27 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+28 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+29 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+30 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+31 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+32 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+33 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+34 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+35 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+36 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+37 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+38 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+39 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+40 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+41 0.0000 1.0000 1.0000
+	0.0000 1.0000 1.0000
+42 0.0000 1.0000 1.0000
+	0.0001 0.9999 0.9998
+43 0.0010 0.9990 0.9981
+	0.0032 0.9968 0.9935
+44 0.0077 0.9924 0.9847
+	0.0150 0.9852 0.9704
+45 0.0260 0.9747 0.9494
+	0.0413 0.9604 0.9208
+46 0.0616 0.9420 0.8840
+	0.0877 0.9194 0.8388
+47 0.1203 0.8926 0.7853
+	0.1601 0.8620 0.7240
+48 0.2078 0.8279 0.6559
+	0.2642 0.7910 0.5820
+49 0.3300 0.7519 0.5038
+	0.0000 1.0000 1.0000
+Enter the number of dielectric spheres --> Number of dielectric spheres (numsph) = 1 
+ Enter sphere radius (cells), epsilon, sigma -->    Values read - Radius =   3.00	Eps =   2.00	Sigma =   3.00 
+ 
+
+     Summary of 2 dielectrics: 
+
+     Note: entry [0] is for free space and has radius "0" 
+
+           Other dieletrics are arranged in concentric circles 
+           around the centre of the grid - (ic,jc,kc) = (25,25,25)
+
+     Index   Radius   Epsilon   Sigma  
+     -----   ------   -------  ------- 
+         0     0.00      1.00    0.00
+         1     3.00      2.00    3.00
+
+
+     **** End of details of dielectric spheres 
+
+     Contents of the the Gax 3D matrix
+
+ 20 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ 21 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ 22 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ 23 1.00 1.00 1.00 0.13 0.13 0.13 0.13 1.00 1.00 1.00 
+ 24 1.00 1.00 0.13 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 25 1.00 1.00 0.13 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 26 1.00 1.00 0.13 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 27 1.00 1.00 1.00 0.13 0.13 0.13 0.13 1.00 1.00 1.00 
+ 28 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ 29 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+
+
+     End of the Gax 3D matrix
+
+    Contents of the 3D Gay matrix 
+
+ 20 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ 21 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ 22 1.00 1.00 1.00 1.00 0.13 0.13 0.13 1.00 1.00 1.00 
+ 23 1.00 1.00 1.00 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 24 1.00 1.00 1.00 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 25 1.00 1.00 1.00 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 26 1.00 1.00 1.00 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 27 1.00 1.00 1.00 1.00 0.13 0.13 0.13 1.00 1.00 1.00 
+ 28 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ 29 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ Gaz	
+ 20 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ 21 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ 22 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ 23 1.00 1.00 1.00 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 24 1.00 1.00 1.00 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 25 1.00 1.00 1.00 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 26 1.00 1.00 1.00 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 27 1.00 1.00 1.00 0.13 0.13 0.13 0.13 0.13 1.00 1.00 
+ 28 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+ 29 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 
+
+
+     Entering time loop ... 
+
+     Number of time steps = 300
+
+     OMP system reports following parameters: 
+         max number of threads    =      1 
+         number of computer nodes =      1   
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 1 of 300 
+
+     Time (T) =    1. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 2 of 300 
+
+     Time (T) =    2. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 3 of 300 
+
+     Time (T) =    3. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 4 of 300 
+
+     Time (T) =    4. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 5 of 300 
+
+     Time (T) =    5. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 6 of 300 
+
+     Time (T) =    6. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 7 of 300 
+
+     Time (T) =    7. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 8 of 300 
+
+     Time (T) =    8. Magnitude of pulse =   0.01 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 9 of 300 
+
+     Time (T) =    9. Magnitude of pulse =   0.01 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 10 of 300 
+
+     Time (T) =   10. Magnitude of pulse =   0.01 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 11 of 300 
+
+     Time (T) =   11. Magnitude of pulse =   0.01 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 12 of 300 
+
+     Time (T) =   12. Magnitude of pulse =   0.02 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 13 of 300 
+
+     Time (T) =   13. Magnitude of pulse =   0.03 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 14 of 300 
+
+     Time (T) =   14. Magnitude of pulse =   0.03 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 15 of 300 
+
+     Time (T) =   15. Magnitude of pulse =   0.04 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 16 of 300 
+
+     Time (T) =   16. Magnitude of pulse =   0.06 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 17 of 300 
+
+     Time (T) =   17. Magnitude of pulse =   0.07 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 18 of 300 
+
+     Time (T) =   18. Magnitude of pulse =   0.09 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 19 of 300 
+
+     Time (T) =   19. Magnitude of pulse =   0.11 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 20 of 300 
+
+     Time (T) =   20. Magnitude of pulse =   0.14 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 21 of 300 
+
+     Time (T) =   21. Magnitude of pulse =   0.16 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 22 of 300 
+
+     Time (T) =   22. Magnitude of pulse =   0.20 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 23 of 300 
+
+     Time (T) =   23. Magnitude of pulse =   0.24 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 24 of 300 
+
+     Time (T) =   24. Magnitude of pulse =   0.28 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 25 of 300 
+
+     Time (T) =   25. Magnitude of pulse =   0.32 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 26 of 300 
+
+     Time (T) =   26. Magnitude of pulse =   0.38 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 27 of 300 
+
+     Time (T) =   27. Magnitude of pulse =   0.43 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 28 of 300 
+
+     Time (T) =   28. Magnitude of pulse =   0.49 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 29 of 300 
+
+     Time (T) =   29. Magnitude of pulse =   0.55 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 30 of 300 
+
+     Time (T) =   30. Magnitude of pulse =   0.61 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 31 of 300 
+
+     Time (T) =   31. Magnitude of pulse =   0.67 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 32 of 300 
+
+     Time (T) =   32. Magnitude of pulse =   0.73 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 33 of 300 
+
+     Time (T) =   33. Magnitude of pulse =   0.78 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 34 of 300 
+
+     Time (T) =   34. Magnitude of pulse =   0.84 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 35 of 300 
+
+     Time (T) =   35. Magnitude of pulse =   0.88 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 36 of 300 
+
+     Time (T) =   36. Magnitude of pulse =   0.92 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 37 of 300 
+
+     Time (T) =   37. Magnitude of pulse =   0.96 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 38 of 300 
+
+     Time (T) =   38. Magnitude of pulse =   0.98 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 39 of 300 
+
+     Time (T) =   39. Magnitude of pulse =   1.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 40 of 300 
+
+     Time (T) =   40. Magnitude of pulse =   1.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 41 of 300 
+
+     Time (T) =   41. Magnitude of pulse =   1.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 42 of 300 
+
+     Time (T) =   42. Magnitude of pulse =   0.98 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 43 of 300 
+
+     Time (T) =   43. Magnitude of pulse =   0.96 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 44 of 300 
+
+     Time (T) =   44. Magnitude of pulse =   0.92 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 45 of 300 
+
+     Time (T) =   45. Magnitude of pulse =   0.88 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 46 of 300 
+
+     Time (T) =   46. Magnitude of pulse =   0.84 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 47 of 300 
+
+     Time (T) =   47. Magnitude of pulse =   0.78 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 48 of 300 
+
+     Time (T) =   48. Magnitude of pulse =   0.73 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 49 of 300 
+
+     Time (T) =   49. Magnitude of pulse =   0.67 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 50 of 300 
+
+     Time (T) =   50. Magnitude of pulse =   0.61 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 51 of 300 
+
+     Time (T) =   51. Magnitude of pulse =   0.55 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 52 of 300 
+
+     Time (T) =   52. Magnitude of pulse =   0.49 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 53 of 300 
+
+     Time (T) =   53. Magnitude of pulse =   0.43 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 54 of 300 
+
+     Time (T) =   54. Magnitude of pulse =   0.38 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 55 of 300 
+
+     Time (T) =   55. Magnitude of pulse =   0.32 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 56 of 300 
+
+     Time (T) =   56. Magnitude of pulse =   0.28 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 57 of 300 
+
+     Time (T) =   57. Magnitude of pulse =   0.24 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 58 of 300 
+
+     Time (T) =   58. Magnitude of pulse =   0.20 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 59 of 300 
+
+     Time (T) =   59. Magnitude of pulse =   0.16 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 60 of 300 
+
+     Time (T) =   60. Magnitude of pulse =   0.14 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 61 of 300 
+
+     Time (T) =   61. Magnitude of pulse =   0.11 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 62 of 300 
+
+     Time (T) =   62. Magnitude of pulse =   0.09 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 63 of 300 
+
+     Time (T) =   63. Magnitude of pulse =   0.07 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 64 of 300 
+
+     Time (T) =   64. Magnitude of pulse =   0.06 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 65 of 300 
+
+     Time (T) =   65. Magnitude of pulse =   0.04 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 66 of 300 
+
+     Time (T) =   66. Magnitude of pulse =   0.03 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 67 of 300 
+
+     Time (T) =   67. Magnitude of pulse =   0.03 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 68 of 300 
+
+     Time (T) =   68. Magnitude of pulse =   0.02 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 69 of 300 
+
+     Time (T) =   69. Magnitude of pulse =   0.01 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 70 of 300 
+
+     Time (T) =   70. Magnitude of pulse =   0.01 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 71 of 300 
+
+     Time (T) =   71. Magnitude of pulse =   0.01 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 72 of 300 
+
+     Time (T) =   72. Magnitude of pulse =   0.01 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 73 of 300 
+
+     Time (T) =   73. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 74 of 300 
+
+     Time (T) =   74. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 75 of 300 
+
+     Time (T) =   75. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 76 of 300 
+
+     Time (T) =   76. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 77 of 300 
+
+     Time (T) =   77. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 78 of 300 
+
+     Time (T) =   78. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 79 of 300 
+
+     Time (T) =   79. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 80 of 300 
+
+     Time (T) =   80. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 81 of 300 
+
+     Time (T) =   81. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 82 of 300 
+
+     Time (T) =   82. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 83 of 300 
+
+     Time (T) =   83. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 84 of 300 
+
+     Time (T) =   84. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 85 of 300 
+
+     Time (T) =   85. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 86 of 300 
+
+     Time (T) =   86. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 87 of 300 
+
+     Time (T) =   87. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 88 of 300 
+
+     Time (T) =   88. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 89 of 300 
+
+     Time (T) =   89. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 90 of 300 
+
+     Time (T) =   90. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 91 of 300 
+
+     Time (T) =   91. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 92 of 300 
+
+     Time (T) =   92. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 93 of 300 
+
+     Time (T) =   93. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 94 of 300 
+
+     Time (T) =   94. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 95 of 300 
+
+     Time (T) =   95. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 96 of 300 
+
+     Time (T) =   96. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 97 of 300 
+
+     Time (T) =   97. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 98 of 300 
+
+     Time (T) =   98. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 99 of 300 
+
+     Time (T) =   99. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 100 of 300 
+
+     Time (T) =  100. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 101 of 300 
+
+     Time (T) =  101. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 102 of 300 
+
+     Time (T) =  102. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 103 of 300 
+
+     Time (T) =  103. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 104 of 300 
+
+     Time (T) =  104. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 105 of 300 
+
+     Time (T) =  105. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 106 of 300 
+
+     Time (T) =  106. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 107 of 300 
+
+     Time (T) =  107. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 108 of 300 
+
+     Time (T) =  108. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 109 of 300 
+
+     Time (T) =  109. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 110 of 300 
+
+     Time (T) =  110. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 111 of 300 
+
+     Time (T) =  111. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 112 of 300 
+
+     Time (T) =  112. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 113 of 300 
+
+     Time (T) =  113. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 114 of 300 
+
+     Time (T) =  114. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 115 of 300 
+
+     Time (T) =  115. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 116 of 300 
+
+     Time (T) =  116. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 117 of 300 
+
+     Time (T) =  117. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 118 of 300 
+
+     Time (T) =  118. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 119 of 300 
+
+     Time (T) =  119. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 120 of 300 
+
+     Time (T) =  120. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 121 of 300 
+
+     Time (T) =  121. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 122 of 300 
+
+     Time (T) =  122. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 123 of 300 
+
+     Time (T) =  123. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 124 of 300 
+
+     Time (T) =  124. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 125 of 300 
+
+     Time (T) =  125. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 126 of 300 
+
+     Time (T) =  126. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 127 of 300 
+
+     Time (T) =  127. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 128 of 300 
+
+     Time (T) =  128. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 129 of 300 
+
+     Time (T) =  129. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 130 of 300 
+
+     Time (T) =  130. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 131 of 300 
+
+     Time (T) =  131. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 132 of 300 
+
+     Time (T) =  132. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 133 of 300 
+
+     Time (T) =  133. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 134 of 300 
+
+     Time (T) =  134. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 135 of 300 
+
+     Time (T) =  135. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 136 of 300 
+
+     Time (T) =  136. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 137 of 300 
+
+     Time (T) =  137. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 138 of 300 
+
+     Time (T) =  138. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 139 of 300 
+
+     Time (T) =  139. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 140 of 300 
+
+     Time (T) =  140. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 141 of 300 
+
+     Time (T) =  141. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 142 of 300 
+
+     Time (T) =  142. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 143 of 300 
+
+     Time (T) =  143. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 144 of 300 
+
+     Time (T) =  144. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 145 of 300 
+
+     Time (T) =  145. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 146 of 300 
+
+     Time (T) =  146. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 147 of 300 
+
+     Time (T) =  147. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 148 of 300 
+
+     Time (T) =  148. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 149 of 300 
+
+     Time (T) =  149. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 150 of 300 
+
+     Time (T) =  150. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 151 of 300 
+
+     Time (T) =  151. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 152 of 300 
+
+     Time (T) =  152. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 153 of 300 
+
+     Time (T) =  153. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 154 of 300 
+
+     Time (T) =  154. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 155 of 300 
+
+     Time (T) =  155. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 156 of 300 
+
+     Time (T) =  156. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 157 of 300 
+
+     Time (T) =  157. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 158 of 300 
+
+     Time (T) =  158. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 159 of 300 
+
+     Time (T) =  159. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 160 of 300 
+
+     Time (T) =  160. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 161 of 300 
+
+     Time (T) =  161. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 162 of 300 
+
+     Time (T) =  162. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 163 of 300 
+
+     Time (T) =  163. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 164 of 300 
+
+     Time (T) =  164. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 165 of 300 
+
+     Time (T) =  165. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 166 of 300 
+
+     Time (T) =  166. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 167 of 300 
+
+     Time (T) =  167. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 168 of 300 
+
+     Time (T) =  168. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 169 of 300 
+
+     Time (T) =  169. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 170 of 300 
+
+     Time (T) =  170. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 171 of 300 
+
+     Time (T) =  171. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 172 of 300 
+
+     Time (T) =  172. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 173 of 300 
+
+     Time (T) =  173. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 174 of 300 
+
+     Time (T) =  174. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 175 of 300 
+
+     Time (T) =  175. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 176 of 300 
+
+     Time (T) =  176. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 177 of 300 
+
+     Time (T) =  177. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 178 of 300 
+
+     Time (T) =  178. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 179 of 300 
+
+     Time (T) =  179. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 180 of 300 
+
+     Time (T) =  180. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 181 of 300 
+
+     Time (T) =  181. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 182 of 300 
+
+     Time (T) =  182. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 183 of 300 
+
+     Time (T) =  183. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 184 of 300 
+
+     Time (T) =  184. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 185 of 300 
+
+     Time (T) =  185. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 186 of 300 
+
+     Time (T) =  186. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 187 of 300 
+
+     Time (T) =  187. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 188 of 300 
+
+     Time (T) =  188. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 189 of 300 
+
+     Time (T) =  189. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 190 of 300 
+
+     Time (T) =  190. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 191 of 300 
+
+     Time (T) =  191. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 192 of 300 
+
+     Time (T) =  192. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 193 of 300 
+
+     Time (T) =  193. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 194 of 300 
+
+     Time (T) =  194. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 195 of 300 
+
+     Time (T) =  195. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 196 of 300 
+
+     Time (T) =  196. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 197 of 300 
+
+     Time (T) =  197. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 198 of 300 
+
+     Time (T) =  198. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 199 of 300 
+
+     Time (T) =  199. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 200 of 300 
+
+     Time (T) =  200. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 201 of 300 
+
+     Time (T) =  201. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 202 of 300 
+
+     Time (T) =  202. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 203 of 300 
+
+     Time (T) =  203. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 204 of 300 
+
+     Time (T) =  204. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 205 of 300 
+
+     Time (T) =  205. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 206 of 300 
+
+     Time (T) =  206. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 207 of 300 
+
+     Time (T) =  207. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 208 of 300 
+
+     Time (T) =  208. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 209 of 300 
+
+     Time (T) =  209. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 210 of 300 
+
+     Time (T) =  210. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 211 of 300 
+
+     Time (T) =  211. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 212 of 300 
+
+     Time (T) =  212. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 213 of 300 
+
+     Time (T) =  213. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 214 of 300 
+
+     Time (T) =  214. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 215 of 300 
+
+     Time (T) =  215. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 216 of 300 
+
+     Time (T) =  216. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 217 of 300 
+
+     Time (T) =  217. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 218 of 300 
+
+     Time (T) =  218. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 219 of 300 
+
+     Time (T) =  219. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 220 of 300 
+
+     Time (T) =  220. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 221 of 300 
+
+     Time (T) =  221. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 222 of 300 
+
+     Time (T) =  222. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 223 of 300 
+
+     Time (T) =  223. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 224 of 300 
+
+     Time (T) =  224. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 225 of 300 
+
+     Time (T) =  225. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 226 of 300 
+
+     Time (T) =  226. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 227 of 300 
+
+     Time (T) =  227. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 228 of 300 
+
+     Time (T) =  228. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 229 of 300 
+
+     Time (T) =  229. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 230 of 300 
+
+     Time (T) =  230. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 231 of 300 
+
+     Time (T) =  231. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 232 of 300 
+
+     Time (T) =  232. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 233 of 300 
+
+     Time (T) =  233. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 234 of 300 
+
+     Time (T) =  234. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 235 of 300 
+
+     Time (T) =  235. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 236 of 300 
+
+     Time (T) =  236. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 237 of 300 
+
+     Time (T) =  237. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 238 of 300 
+
+     Time (T) =  238. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 239 of 300 
+
+     Time (T) =  239. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 240 of 300 
+
+     Time (T) =  240. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 241 of 300 
+
+     Time (T) =  241. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 242 of 300 
+
+     Time (T) =  242. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 243 of 300 
+
+     Time (T) =  243. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 244 of 300 
+
+     Time (T) =  244. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 245 of 300 
+
+     Time (T) =  245. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 246 of 300 
+
+     Time (T) =  246. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 247 of 300 
+
+     Time (T) =  247. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 248 of 300 
+
+     Time (T) =  248. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 249 of 300 
+
+     Time (T) =  249. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 250 of 300 
+
+     Time (T) =  250. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 251 of 300 
+
+     Time (T) =  251. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 252 of 300 
+
+     Time (T) =  252. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 253 of 300 
+
+     Time (T) =  253. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 254 of 300 
+
+     Time (T) =  254. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 255 of 300 
+
+     Time (T) =  255. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 256 of 300 
+
+     Time (T) =  256. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 257 of 300 
+
+     Time (T) =  257. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 258 of 300 
+
+     Time (T) =  258. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 259 of 300 
+
+     Time (T) =  259. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 260 of 300 
+
+     Time (T) =  260. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 261 of 300 
+
+     Time (T) =  261. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 262 of 300 
+
+     Time (T) =  262. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 263 of 300 
+
+     Time (T) =  263. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 264 of 300 
+
+     Time (T) =  264. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 265 of 300 
+
+     Time (T) =  265. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 266 of 300 
+
+     Time (T) =  266. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 267 of 300 
+
+     Time (T) =  267. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 268 of 300 
+
+     Time (T) =  268. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 269 of 300 
+
+     Time (T) =  269. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 270 of 300 
+
+     Time (T) =  270. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 271 of 300 
+
+     Time (T) =  271. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 272 of 300 
+
+     Time (T) =  272. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 273 of 300 
+
+     Time (T) =  273. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 274 of 300 
+
+     Time (T) =  274. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 275 of 300 
+
+     Time (T) =  275. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 276 of 300 
+
+     Time (T) =  276. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 277 of 300 
+
+     Time (T) =  277. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 278 of 300 
+
+     Time (T) =  278. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 279 of 300 
+
+     Time (T) =  279. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 280 of 300 
+
+     Time (T) =  280. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 281 of 300 
+
+     Time (T) =  281. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 282 of 300 
+
+     Time (T) =  282. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 283 of 300 
+
+     Time (T) =  283. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 284 of 300 
+
+     Time (T) =  284. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 285 of 300 
+
+     Time (T) =  285. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 286 of 300 
+
+     Time (T) =  286. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 287 of 300 
+
+     Time (T) =  287. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 288 of 300 
+
+     Time (T) =  288. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 289 of 300 
+
+     Time (T) =  289. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 290 of 300 
+
+     Time (T) =  290. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 291 of 300 
+
+     Time (T) =  291. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 292 of 300 
+
+     Time (T) =  292. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 293 of 300 
+
+     Time (T) =  293. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 294 of 300 
+
+     Time (T) =  294. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 295 of 300 
+
+     Time (T) =  295. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 296 of 300 
+
+     Time (T) =  296. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 297 of 300 
+
+     Time (T) =  297. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 298 of 300 
+
+     Time (T) =  298. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 299 of 300 
+
+     Time (T) =  299. Magnitude of pulse =   0.00 
+ 
+
+
+
+ ----------------------------------------------------------------------
+
+     Timestep (n) = 300 of 300 
+
+     Time (T) =  300. Magnitude of pulse =   0.00 
+ 
+
+
+
+     Loop over timeateps is completed
+
+     Details of the JC Plane now follow
+
+Ez 
+ 0	 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+ 1	 0.000 0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.001 0.001 0.001 0.001 0.001 0.002 0.002 0.002 0.002 0.002 0.002 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.000 
+ 2	 0.000 0.000 0.000 0.000 0.001 0.002 0.002 0.002 0.002 0.002 0.002 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.003 0.002 0.002 0.002 0.002 0.001 0.001 0.001 0.001 0.000 
+ 3	 0.000 0.000 0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000-0.000 0.000 0.001 0.001 0.000 
+ 4	 0.000 0.000 0.000 0.000-0.000-0.000-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.000-0.000 0.000 0.000 0.000 0.000 
+ 5	 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 
+ 6	 0.000 0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+ 7	 0.000 0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+ 8	 0.000 0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+ 9	 0.000 0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+10	 0.000 0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+11	 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.000 0.000 0.000 
+12	 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+13	 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+14	 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+15	 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+16	 0.000 0.000-0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+17	 0.000 0.000-0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+18	 0.000 0.000-0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+19	 0.000 0.000-0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+20	 0.000 0.000-0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+21	 0.000 0.000-0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+22	 0.000 0.000-0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+23	 0.000 0.000-0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000-0.000-0.000 0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+24	 0.000 0.000-0.000 0.000 0.001 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000-0.000-0.000 0.000 0.000 0.000-0.000-0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.001 0.000 0.000 0.000 
+25	 0.000 0.000-0.000 0.000 0.001 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000-0.000-0.000 0.000 0.000 0.000-0.000-0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+26	 0.000 0.000-0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000-0.000-0.000 0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+27	 0.000 0.000-0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 
+28	 0.000 0.000-0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001-0.000 0.000 0.000 
+29	 0.000 0.000-0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001-0.000 0.000 0.000 
+30	 0.000 0.000-0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001-0.000 0.000 0.000 
+31	 0.000 0.000-0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001-0.000 0.000 0.000 
+32	 0.000 0.000-0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001-0.000 0.000 0.000 
+33	 0.000 0.000-0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001-0.000 0.000 0.000 
+34	 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001-0.000 0.000 0.000 
+35	 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001-0.000 0.000 0.000 
+36	 0.000 0.000 0.000 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+37	 0.000 0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+38	 0.000 0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+39	 0.000 0.000 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+40	 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+41	 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+42	 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+43	 0.000 0.000 0.000 0.000 0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 
+44	 0.000 0.000 0.000 0.000-0.000-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.001-0.000 0.000 0.000 0.000 0.000 
+45	 0.000 0.000 0.000-0.000-0.000-0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000-0.000 0.000 0.001 0.001 0.000 
+46	 0.000 0.000 0.000 0.001 0.001 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.002 0.001 0.001 0.001 0.000 
+47	 0.000 0.000 0.001 0.001 0.001 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.000 
+48	 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.000 
+49	 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+T =  300 
+
+
+     **** End of program
+
+
+real	0m5.106s
+user	0m5.061s
+sys	0m0.019s
+   
+    ***** Script completes at Tue Apr 21 15:05:58 BST 2020 
+   
